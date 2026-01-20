@@ -1,0 +1,309 @@
+@font-face {
+    font-family: Figtree;
+    src: url("fonts/Figtree.ttf");
+}
+
+@font-face {
+    font-family: ABeeZee;
+    src: url("fonts/ABeeZee.ttf");
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("fonts/SourceCodePro.ttf");
+}
+
+:root {
+    --bright-blue: #36c6fb;
+    --light-blue: #91e2ffce;
+    --very-light-blue: #baedff;
+    --very-dark-green: #132f1e;
+    --dark-green: #2e522b;
+    --medium-green: #76b070;
+    --semi-opaque-green: #64d6ff4d;
+    --medium-light-green: #76b07080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ABeeZee, sans-serif;
+    background: linear-gradient(135deg, var(--medium-light-green) 0%, #f0fffe 100%);
+    color: var(--very-dark-green);
+    line-height: 1.6;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: Figtree, sans-serif;
+    font-size: 3em;
+    color: var(--dark-green);
+    margin-bottom: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(145, 226, 255, 0.3);
+}
+
+h2 {
+    font-family: Figtree, sans-serif;
+    font-size: 2em;
+    color: var(--dark-green);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-family: Figtree, sans-serif;
+    font-size: 1.3em;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background: rgba(118, 176, 112, 0.15);
+}
+
+a:hover {
+    color: white;
+    background: var(--medium-green);
+    transform: scale(1.1);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--medium-green);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Main container */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Intro text */
+p:nth-of-type(1),
+p:nth-of-type(2),
+p:nth-of-type(3) {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--dark-green);
+    font-weight: 500;
+}
+
+/* Section styling */
+.dates,
+.howto,
+.prizes,
+.contact {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 40px;
+    padding: 40px;
+    margin: 30px auto;
+    box-shadow: 0 10px 30px rgba(118, 176, 112, 0.25);
+    border: 4px solid var(--medium-green);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    max-width: 800px;
+}
+
+.dates:hover,
+.howto:hover,
+.prizes:hover,
+.contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(118, 176, 112, 0.25);
+}
+
+/* Dates section */
+.dates {
+    background: linear-gradient(135deg, rgba(118, 176, 112, 0.12) 0%, rgba(145, 226, 255, 0.08) 100%);
+}
+
+.dates h2 {
+    text-decoration: underline;
+
+}
+
+.dates ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dates li {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px 25px;
+    margin: 12px 0;
+    border-radius: 25px;
+    border-left: 5px solid var(--medium-green);
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.dates li:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(10px);
+}
+
+.dates strong {
+    color: var(--medium-green);
+}
+
+/* How-to section */
+.howto {
+    background: linear-gradient(135deg, rgba(118, 176, 112, 0.12) 0%, rgba(145, 226, 255, 0.08) 100%);
+}
+
+#how_to_title {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.howto p {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Prizes section */
+.prizes {
+    background: linear-gradient(135deg, rgba(118, 176, 112, 0.12) 0%, rgba(145, 226, 255, 0.08) 100%);
+}
+
+.prizes h3 {
+    text-align: center;
+    background: rgba(118, 176, 112, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.prizes ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.prizes li {
+    background: linear-gradient(135deg, rgba(118, 176, 112, 0.2), rgba(145, 226, 255, 0.15));
+    padding: 20px 25px;
+    border-radius: 30px;
+    border: 3px solid var(--medium-green);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.prizes li:hover {
+    transform: scale(1.05) rotateY(-5deg);
+    box-shadow: 0 8px 20px rgba(118, 176, 112, 0.4);
+    background: linear-gradient(135deg, rgba(118, 176, 112, 0.3), rgba(145, 226, 255, 0.25));
+    border-color: var(--dark-green);
+}
+
+.prizes strong {
+    display: block;
+    color: var(--dark-green);
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+/* Contact section */
+.contact {
+    background: linear-gradient(135deg, rgba(118, 176, 112, 0.12) 0%, rgba(145, 226, 255, 0.08) 100%);
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px 30px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.contact a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 3px dotted var(--medium-green);
+}
+
+/* General list styling */
+ul:not(.prizes ul):not(.dates ul) {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul:not(.prizes ul):not(.dates ul) li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .dates,
+    .howto,
+    .prizes,
+    .contact {
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .prizes ul {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 20px 10px;
+    }
+}
